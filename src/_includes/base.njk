@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ title }} – Chainsaw Man Fan Site</title>
+    <meta name="description" content="{{ description }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quantico:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container">
+            <a class="logo CSM-logo" href="/">
+                <img src="src/images/Chainsaw-Man-Logo.png" alt="Chainsaw Man Logo">
+            </a>
+            <nav class="site-nav" aria-label="Main">
+                <ul>
+                    <li><a href="/"{% if page.url == "/" %} aria-current="page"{% endif %}>Home</a></li>
+                    <li><a href="/characters/"{% if page.url == "/characters/" %} aria-current="page"{% endif %}>Characters</a></li>
+                    <li><a href="/author/"{% if page.url == "/author/" %} aria-current="page"{% endif %}>Author</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        {{ content | safe }}
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>A Chainsaw Man Fan Site - not affiliated with the creator or publisher</p>
+            <nav aria-label="Footer">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/characters/">Characters</a></li>
+                    <li><a href="/author/">Author</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    
+</body>
+</html>
