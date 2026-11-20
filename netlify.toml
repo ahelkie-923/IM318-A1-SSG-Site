@@ -1,0 +1,4 @@
+[build]
+  # Install dependencies if they aren't already present, then build with Eleventy.
+  command = "(npm ls @11ty/eleventy >/dev/null 2>&1 || npm ci --no-audit --no-fund) && npm run build"
+  publish = "public"
