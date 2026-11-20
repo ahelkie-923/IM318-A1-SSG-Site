@@ -4,7 +4,7 @@ module.exports = function (eleventyConfig) {
     return {
         dir: {
             input: "src", // Source Files
-            output: "public", // Output Files
+            output: "_site", // Output Files
         }
     }
 };
